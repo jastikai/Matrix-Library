@@ -7,9 +7,13 @@ import numpy as np
 # Write test script here
 
 a = 4
-b = 5
+b = 9
 A = np.array(np.random.rand(a, b))
-B = np.array(np.random.rand(a, b))
-M = mat.matsum(A, B)
-print(M)
+B = np.array(np.random.rand(b, a))
+print("\nThe sum of test matrices is:\n")
+M_0 = mat.matsum(A, B)
+#print(M_0)
 
+M_1 = mat.matmult(A, B)
+print("\nThe product of test matrices is:\n")
+print(M_1)
